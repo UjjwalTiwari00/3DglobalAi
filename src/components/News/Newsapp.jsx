@@ -14,8 +14,7 @@ const Newsapp = () => {
       `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${API_KEY}`
     );
     const jsonData = await response.json();
-    console.log(jsonData.articles);
-    let dt = jsonData.articles.slice(0, 10);
+    let dt = jsonData.articles.slice(0, 12); // 12 for grid feel
     setNewsData(dt);
   };
 
@@ -23,39 +22,13 @@ const Newsapp = () => {
     getData();
   }, []);
 
-  const handleInput = (e) => {
-    setSearch(e.target.value);
-  };
-
-  const userInput = (event) => {
-    setSearch(event.target.value);
-  };
-
   return (
-    <div className="min-h-screen bg-gray-100">
-      <nav className="flex flex-col md:flex-row items-center justify-between p-6 bg-white shadow-md">
-        <h1 className="text-2xl font-bold text-blue-600 mb-4 md:mb-0">
-          Trendy News
-        </h1>
-        <ul className="flex gap-6 mb-4 md:mb-0">
-          <a className="font-semibold text-lg text-gray-800 cursor-pointer hover:text-blue-600">
-            All News
-          </a>
-          <a className="font-semibold text-lg text-gray-800 cursor-pointer hover:text-blue-600">
-            Trending
-          </a>
-        </ul>
-      </nav>
-
-      <div className="text-center mt-8">
-        <p className="text-xl font-semibold text-gray-700">
-          Stay Updated with TrendyNews
-        </p>
+    <div className="min-h-screen bg-gradient-to-l from-[#CBD3F2] to-white pt-28 px-6">
+      {/* pt-28 gives nice top space for the header */}
+      <div className="text-center mb-10">
+        {/* <h1 className="text-3xl font-bold text-gray-800">Latest Energy & Tech News</h1> */}
       </div>
-
-      <div className="mt-10">
-        {newsData ? <Card data={newsData} /> : null}
-      </div>
+      {newsData ? <Card data={newsData} /> : <p className="text-center">Loading...</p>}
     </div>
   );
 };

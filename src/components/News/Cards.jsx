@@ -1,39 +1,36 @@
 import React from 'react';
 
 const Card = ({ data }) => {
-  console.log(data);
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      {data.map((curItem, index) => {
-        if (!curItem.urlToImage) return null;
+    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
+      {data.map((item, index) => {
+        if (!item.urlToImage) return null;
 
         return (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
+            className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-5xl cursor-pointer"
           >
             <img
-              src={curItem.urlToImage}
-              alt={curItem.title}
-              className="w-full h-48 object-cover"
+              src={item.urlToImage}
+              alt={item.title}
+              className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="p-4 flex flex-col flex-grow">
+            <div className="p-4 flex flex-col h-[200px]">
+              <h2 className="text-md font-semibold mb-2 text-gray-800 line-clamp-2">
+                {item.title}
+              </h2>
+              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                {item.description}
+              </p>
               <a
-                href={curItem.url}
+                href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-semibold text-blue-600 hover:underline mb-2"
+                className="mt-auto inline-block text-blue-600 font-medium hover:underline"
               >
-                {curItem.title}
+                Read More →
               </a>
-              <p className="text-gray-700 flex-grow">{curItem.description}</p>
-              <button
-                onClick={() => window.open(curItem.url)}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-              >
-                Read More
-              </button>
             </div>
           </div>
         );
