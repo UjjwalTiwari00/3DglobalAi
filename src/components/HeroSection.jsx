@@ -8,8 +8,8 @@ const HeroSection = ({ className }) => {
     <div
       className={`hero-section bg-gradient-to-r
 from-[#dfe2fe]
-via-[#849cc7]
-to-[#8e98f5]
+via-[#bbccec]
+to-[#acb2e7]
  text-white py-16 px-4 flex justify-center flex-col md:flex-row items-center  ${className}`}
     >
       {/* Text Area */}

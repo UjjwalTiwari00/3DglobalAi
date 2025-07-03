@@ -14,8 +14,8 @@ const Header = ({ className }) => {
                 {/* Navigation */}
                 <nav className="hidden md:flex">
                     <ul className="flex space-x-8">
-                        <li><a href="#home" className="hover:text-blue-400-overlay transition-colors duration-200 font-medium">Home</a></li>
-                        <li><a href="#security" className="hover:text-blue-400-overlay transition-colors duration-200 font-medium">Security</a></li>
+                        <li><a href="/" className="hover:text-blue-400-overlay transition-colors duration-200 font-medium">Home</a></li>
+                        <li><a href="/news" className="hover:text-blue-400-overlay transition-colors duration-200 font-medium">News</a></li>
                         <li><a href="#about" className="hover:text-blue-400-overlay transition-colors duration-200 font-medium">About</a></li>
                         <li><a href="#blog" className="hover:text-blue-400-overlay transition-colors duration-200 font-medium">Blog</a></li>
                         <li><a href="#contact" className="hover:text-blue-400-overlay transition-colors duration-200 font-medium">Contact</a></li>
