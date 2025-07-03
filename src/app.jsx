@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Newsapp from "./components/News/Newsapp";
+import BlogPage from "./components/BlogPage";
+import ContactPage from "./components/ContactPage";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<Newsapp />} />
+         <Route path="/blogs" element={<BlogPage />} />
+         <Route path="/contact" element={<ContactPage />} />
       </Routes>
 
       {/* ✅ FOOTER is always shown */}
