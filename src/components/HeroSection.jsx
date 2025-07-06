@@ -6,10 +6,7 @@ import PriceHighlight from "./Highlight.jsx";
 const HeroSection = ({ className }) => {
   return (
     <div
-      className={`hero-section bg-gradient-to-r
-from-[#dfe2fe]
-via-[#bbccec]
-to-[#acb2e7]
+      className={`hero-section bg-[#1f1f1f]
  text-white py-16 px-4 flex justify-center flex-col md:flex-row items-center  ${className}`}
     >
       {/* Text Area */}
@@ -24,7 +21,8 @@ to-[#acb2e7]
             </div>
             <p className="text-base sm:text-lg md:text-xl xl:text-2xl text-gray-900 dark:text-gray-900 max-w-3xl mx-auto mb-4 sm:mb-6 mt-4 leading-relaxed px-4">
              {" "}  
-             <strong className="font-bold dark:text-black"> <PriceHighlight>Streamline inventory,</PriceHighlight></strong>{" "}
+             {/* <strong className="font-bold dark:text-black"> <PriceHighlight></PriceHighlight></strong> */}
+            <strong className="font-bold dark:text-black">Streamline inventory, </strong>,{" "}
             <strong className="font-bold dark:text-black">manage risk </strong>,{" "}
               <strong className="font-bold dark:text-black">automate P&L tracking</strong>{" "}
             and close your day with confidence, {" "}
@@ -37,8 +35,8 @@ to-[#acb2e7]
         </div>
       </div>
       {/* Globe Placeholder Area */}
-      <div className="globe-placeholder w-full md:w-1/3 flex justify-center items-center relative md:mt-0 transform translate-y-1/3">
-        {/* Floating Widgets Placeholder */}
+      {/* <div className="globe-placeholder w-full md:w-1/3 flex justify-center items-center relative md:mt-0 transform translate-y-1/3">
+
         <div className="absolute top-0 right-0 bg-white bg-opacity-90 text-black p-4 rounded-md shadow-md text-sm">
                     <p className="font-bold">Eva Prosperi</p>
                     <p>Current account • £24,200.95</p>
@@ -49,7 +47,10 @@ to-[#acb2e7]
                 </div>
 
         <SpinningGlobe worldTopoData={world} />
-      </div>
+      </div> */
+      
+      
+      }
     </div>
   );
 };

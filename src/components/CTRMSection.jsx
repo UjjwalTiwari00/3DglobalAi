@@ -2,8 +2,8 @@ import React from "react";
 
 const CTRMETRMSection = () => {
   return (
-    <section className="py-24 px-9 ">
-      <div className="max-w-7xl mx-auto flex flex-col gap-20">
+    <section className="py-16 px-9 ">
+      <div className="max-w-8xl px-16 mx-auto flex flex-col gap-20">
         {/* ETRM Block: Image Left */}
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Image Left */}
